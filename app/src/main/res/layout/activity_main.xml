@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="40dp">
+
+    <EditText
+        android:id="@+id/message_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="message"
+        android:hint="@string/enter_your_message"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="phoneNumber"
+        android:hint="@string/enter_phone_number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/interval_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_edit_text" />
+
+    <EditText
+        android:id="@+id/interval_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="minutesInterval"
+        android:digits="123456789"
+        android:hint="@string/enter_time_in_minutes"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interval_edit_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
