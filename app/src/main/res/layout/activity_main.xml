@@ -8,7 +8,7 @@
     android:padding="40dp">
 
     <EditText
-        android:id="@+id/message_edit_text"
+        android:id="@+id/messageEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="message"
@@ -16,13 +16,13 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
-        app:layout_constraintBottom_toTopOf="@+id/phone_number"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/phone_number"
+        android:id="@+id/phoneNumberEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="phoneNumber"
@@ -30,13 +30,13 @@
         android:inputType="phone"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
-        app:layout_constraintBottom_toTopOf="@+id/interval_edit_text"
+        app:layout_constraintBottom_toTopOf="@+id/intervalEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/message_edit_text" />
+        app:layout_constraintTop_toBottomOf="@id/messageEditText" />
 
     <EditText
-        android:id="@+id/interval_edit_text"
+        android:id="@+id/intervalEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="minutesInterval"
@@ -48,17 +48,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
 
     <Button
-        android:id="@+id/start_button"
+        android:id="@+id/startButton"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interval_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/intervalEditText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
