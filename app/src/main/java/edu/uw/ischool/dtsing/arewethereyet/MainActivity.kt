@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
                     startMsg(
                         this,
                         phoneNumberEditText.text.toString(),
-                        intervalEditText.text.toString().toInt()
+                        intervalEditText.text.toString().toInt(),
+                        messageEditText.text.toString()
                     )
                 } else { // Otherwise, pop a Toast on why the application cannot start
                     Toast.makeText(this, "Please fill out all fields correctly", Toast.LENGTH_SHORT).show()
@@ -68,11 +69,10 @@ class MainActivity : AppCompatActivity() {
             false // Unable to parse to integer, not a valid minute input
         }
 
-
         return validMsg && validPhoneNum && validMinute // Should be true to be legitimate
     }
 
-    private fun startMsg(context: Context, num: String, interval: Int) {
+    private fun startMsg(context: Context, num: String, interval: Int, message: String) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         val currentTime = System.currentTimeMillis()
@@ -88,8 +88,11 @@ class MainActivity : AppCompatActivity() {
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, time, intervalMillis, pendingIntent)
 
+        val toastMessage = "${phoneNumber}: ${message}"
+
         // Toast messages using the format: "(425) 555-1212: Are we there yet?".
-        Toast.makeText(this, "${phoneNumber}: Are we there yet?", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(this, "${phoneNumber}: Are we there yet?", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
     }
 }
 

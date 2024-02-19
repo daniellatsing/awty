@@ -16,7 +16,7 @@ In this part, we will just pop Toast asking the question; in a future part, we w
 ### Extra Credit
 - [x] pushing "Start" pops dialog/Toast describing why the application cannot start (if it cannot start due to illegitimate values)
 
-- [ ] create a custom Toast display for each "send" that has "Texting {phone#}" as a caption and the message itself as the body
+- [x] create a custom Toast display for each "send" that has "Texting {phone#}" as a caption and the message itself as the body
 
 
 
